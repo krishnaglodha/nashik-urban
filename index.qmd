@@ -1,0 +1,120 @@
+---
+title: "Using GIS to improve urban planning"
+author: "Krishna Lodha"
+format: 
+    revealjs:
+        logo: logo_sq.png
+        footer: "https://rottengrapes.tech"
+---
+
+## Core Topics 
+::: {.incremental}
+- Urban sprawl and land use change
+- Heat Island Effect Analysis
+- Illegal built up detection
+:::
+
+# Urban sprawl and land use change 🏙️{.center}
+
+## 🤔 What is urban sprawl?
+- Urban sprawl is the uncontrolled expansion of urban areas, often leading to land use change and habitat fragmentation.
+- Role of GIS & Satellite Data : 
+  - Analyze high-resolution satellite images (e.g., Sentinel-2, Landsat) to detect changes in land use over time.
+  - Use land classification algorithms (e.g., supervised classification, NDVI) to map urban expansion.
+  - Visualize sprawl patterns using GIS tools to inform policymakers.
+
+## 💪🏼 Plan of action{.scrollable}
+- Get imagery from 2016 and 2024 from sentinel 2 and Landsat for RD circle region as pilot
+- Identify Land use for both imageries in 4 main categories (Using Random Forest Classification)
+  - Urban
+  - Barren
+  - Forest/Agriculture
+  - Water
+- Urban Sprawl Prediction for 2036 as per DP plan
+  - Using spatial factors like elevation, slope, distance from roads, and distance from current built-up areas 
+  - Use multi-layer perceptron neural networks (MLPNNs)  
+
+
+## 😎 How can this be useful?
+- we get following answers from this analysis
+  - How & Where the built up area will increase over time?
+  - What Infrastructure arrangements should we prepare for the future?
+  - Utilising barren lands for green spaces?
+- These models can be used while preparing next master plan for the city by doing simluations of road network and urban growth
+  
+# Heat Island Effect Analysis
+
+## 🤔 What is Heat Island Effect (HIE)?{.smaller}
+
+- Heat Island Effect (HIE) is a phenomenon where urban areas experience higher temperatures than surrounding rural areas due to urbanization.
+- Role of GIS & Satellite Data :
+  - Use thermal imagery from Landsat 8 (TIR bands) or Sentinel 3 (OLI bands) to detect changes in land use over time.
+  - Map LST variations across urban areas and identify heat island hotspots.
+  - Integrate NDVI and land cover data to correlate vegetation loss with increased temperatures.
+
+## 💪🏼 Plan of action{.scrollable}
+- Get latest imagery from multiple satellites for College Road and Gangapur region as pilot
+- Apply atmospheric corrections.
+- Generate LST maps to identify hotspots.
+- Correlate LST with LULC types to pinpoint heat contributors.
+- Compare satellite LST with ground data (if available).
+- Create thematic maps showing UHI intensity zones.
+
+## 😎 How can this be useful?
+- Identify and mitigate heat-prone areas in cities.
+- Support policies for reducing heat-related health risks.
+- Focus on areas needing urgent cooling interventions.
+- Align city planning with global sustainability goals.
+
+
+# Illegal built up detection
+
+## 🤔 What is Illegal built up?
+- Illegal built up is a term used to describe construction activities that are not permitted in a particular area.
+- Role of GIS & Satellite Data : 
+  - Analyze high-resolution satellite images (e.g., Sentinel-2, Landsat) to detect changes in land use over time.
+  - Use land classification algorithms (e.g., supervised classification, NDVI) to map urban footprints.
+  - GIS system for municipalities to visualizr and take action on illegal built up.
+
+## 💪🏼 Plan of action{.scrollable}
+- Get latest imagery from multiple satellites for Satpur, Ambad, Pathardi Phata region as pilot
+- Compute LULC and NDVI for each imagery
+- Overlay with existing building footprints ( if available )
+- Superimpose with master plan of the city to identify construction zones
+- Run analysis to identify illegal built up
+
+## 😎 How can this be useful?
+- Identify illegal built up activities on real time basis
+- Easy access of such building footprints for municipalities
+- Complete solution to maintain records of urban development and action taken against it. 
+- Run model on monthly basis to identify illegal built up and take action
+
+# GIS data crowdsourcing
+
+## 🤔 Why we need this?
+- At the moment, there is a lack of open dataset about Nashik city. 
+- This is a problem because the city is growing rapidly and there is a need for better planning and management of the city.
+- Using this data, we can identify the areas that are in need of urgent attention and take action to improve the city.
+- Government as well as private organizations can use this data to identify areas that need improvement and take action to improve the city.
+
+## 💪🏼 Plan of action{.scrollable}
+- Conduct few workshops on college level to let students know about how they can contribute to this project
+- Start contribution mechanism to crowdsource data on OpenStreetMap platform as well as maintaining data at NMC level
+- Award contributors with certificates of completion or monetary rewards
+- Create a portal following the Open Data principles to make the data available to the public
+
+## 😎 How can this be useful?
+- Improve the quality of the data
+- Allowing public to access the data to create various use cases
+- Use this data for better planning and management of the city
+
+
+## Other Topics
+::: {.incremental}
+
+- Flood Risk Assessment in Urban Areas
+- Monitoring Air Pollution Effects on Urban Areas
+- Waterbody Encroachment in Urban Areas
+
+:::
+
